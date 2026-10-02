@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Studio Star | Diagnóstico Instagram & Audiovisual</title>
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <link rel="apple-touch-icon" href="assets/favicon.png">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div id="app">
+    <!-- PROGRESS BAR -->
+    <div class="progress-container">
+      <div class="progress-bar" id="progressBar"></div>
+    </div>
+
+    <!-- LOGO -->
+    <header class="header">
+      <img src="assets/logo.png" alt="Studio Star" class="logo">
+    </header>
+
+    <!-- ========== INTRO ========== -->
+    <section id="step-intro" class="step active">
+      <div class="content">
+        <p class="subtitle">Star studio,<br>O Estúdio que guia os sucessos<br>e a Imagens das estrelas.</p>
+        
+        <h1 class="title">Participe desse questionário rápido de 5 questões<br>e descubra o empecilho de seu sucesso no instagram.</h1>
+        
+        <p class="description">
+          E o como esse seu sucesso pode ser alavancar em seu<br>
+          negócio de produção audiovisual.
+        </p>
+
+        <p class="highlight">
+          Seja <span class="orange">stories mais orquestrados</span> ou <span class="purple">filmagens<br>
+          alucinantes e profissionais</span>. Sabendo disso você<br>
+          saberá o que precisa corrigir, para simplesmente<br>
+          alcançá-lo.
+        </p>
+
+        <div class="cover-image">
+          <img src="assets/capa-guia.jpg" alt="Guia de Setup para Filmmakers Aspirantes">
+        </div>
+
+        <p class="cta-text orange">
+          Com o nosso direcionamento você será capaz de realizar o<br>
+          seu início perfeito como influencer no instagram, e com<br>
+          sua marca consolidada e seus primeiros seguidores que<br>
+          engajam e te entende.
+        </p>
+
+        <div class="stars">
+          <p class="stars-label">O perfil 5</p>
+          <div class="stars-icons">★★★★★</div>
+          <p class="stars-sub">Para estrelas como você.</p>
+        </div>
+
+        <p class="final-text purple">
+          E ao mesmo tempo, conseguir alavancar seus<br>
+          negócios do ramo audiovisual que te fará tráfego<br>
+          automático e orgânico. Permitindo encontrar seu<br>
+          cliente certo e alinhado.<br>
+          Possibilitando cobrar o seu valor e ser<br>
+          reconhecido por ele.
+        </p>
+
+        <button class="btn-primary" onclick="goToStep(1)">Começar Diagnóstico →</button>
+      </div>
+    </section>
+
+    <!-- ========== Q1 ========== -->
+    <section id="step-1" class="step">
+      <div class="content">
+        <h2 class="question">Quando você pensa em criar conteúdo, qual dessas opções te define melhor agora?</h2>
+        <p class="hint">Escolha somente uma das opções e assim que selecionada você será redirecionado automaticamente, com isso responda com Atenção</p>
+
+        <div class="options">
+          <button class="option" data-value="iniciante" data-path="social" onclick="selectOption(1, this)">
+            <span class="icon">🎬</span>
+            <span class="text">Quero começar nas redes sociais, mas não sei por onde.</span>
+          </button>
+          <button class="option" data-value="qualidade" data-path="social" onclick="selectOption(1, this)">
+            <span class="icon">💡</span>
+            <span class="text">Já criou, mas sinto que meu conteúdo não tem qualidade suficiente.</span>
+          </button>
+          <button class="option" data-value="audiovisual" data-path="film" onclick="selectOption(1, this)">
+            <span class="icon">🎥</span>
+            <span class="text">Sou do audiovisual e quero melhorar minhas produções.</span>
+          </button>
+          <button class="option" data-value="negocio" data-path="social" onclick="selectOption(1, this)">
+            <span class="icon">📱</span>
+            <span class="text">Faço vídeos pro meu negócio e quero parecer mais profissional.</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== Q2 ========== -->
+    <section id="step-2" class="step">
+      <div class="content">
+        <h2 class="question">Qual é o principal motivo que te impede de crescer com seus vídeos hoje?</h2>
+
+        <div class="options">
+          <button class="option" data-value="tempo" onclick="selectOption(2, this)">
+            <span class="icon">⏰</span>
+            <span class="text">Falta de tempo para aprender tudo.</span>
+          </button>
+          <button class="option" data-value="equipamento" onclick="selectOption(2, this)">
+            <span class="icon">💰</span>
+            <span class="text">Equipamentos caros demais.</span>
+          </button>
+          <button class="option" data-value="consistencia" onclick="selectOption(2, this)">
+            <span class="icon">😕</span>
+            <span class="text">Dificuldade de manter consistência.</span>
+          </button>
+          <button class="option" data-value="qualidade" onclick="selectOption(2, this)">
+            <span class="icon">😞</span>
+            <span class="text">Falta de qualidade visual nos meus vídeos.</span>
+          </button>
+          <button class="option" data-value="conteudo" onclick="selectOption(2, this)">
+            <span class="icon">🤔</span>
+            <span class="text">Não sei o que postar.</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== Q3 ========== -->
+    <section id="step-3" class="step">
+      <div class="content">
+        <h2 class="question">Se você tivesse uma estrutura simples pra começar HOJE, o que gostaria de conquistar primeiro?</h2>
+
+        <div class="options">
+          <button class="option" data-value="visibilidade" onclick="selectOption(3, this)">
+            <span class="icon">🚀</span>
+            <span class="text">Ganhar visibilidade e seguidores.</span>
+          </button>
+          <button class="option" data-value="trabalhos" onclick="selectOption(3, this)">
+            <span class="icon">💰</span>
+            <span class="text">Fechar meus primeiros trabalhos.</span>
+          </button>
+          <button class="option" data-value="qualidade" onclick="selectOption(3, this)">
+            <span class="icon">🎯</span>
+            <span class="text">Melhorar a qualidade dos vídeos e parecer profissional.</span>
+          </button>
+          <button class="option" data-value="aprender" onclick="selectOption(3, this)">
+            <span class="icon">🧠</span>
+            <span class="text">Aprender de forma prática sem depender de ninguém.</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== Q4 ========== -->
+    <section id="step-4" class="step">
+      <div class="content">
+        <h2 class="question">Se existisse uma estrutura de gravação para elevar a qualidade da produção. Quanto tempo você demoraria pra começar a usar?</h2>
+
+        <div class="options">
+          <button class="option" data-value="hoje" onclick="selectOption(4, this)">
+            <span class="icon">⚡</span>
+            <span class="text">Hoje mesmo.</span>
+          </button>
+          <button class="option" data-value="entender" onclick="selectOption(4, this)">
+            <span class="icon">⏳</span>
+            <span class="text">Assim que eu entender como usar.</span>
+          </button>
+          <button class="option" data-value="investimento" onclick="selectOption(4, this)">
+            <span class="icon">💭</span>
+            <span class="text">Depende do investimento.</span>
+          </button>
+          <button class="option" data-value="pensando" onclick="selectOption(4, this)">
+            <span class="icon">❌</span>
+            <span class="text">Ainda estou pensando.</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== RESULT FILM ========== -->
+    <section id="step-result-film" class="step">
+      <div class="content result-content">
+        <h2 class="result-title">Seu Diagnostico foi realizado.</h2>
+        <p class="result-highlight red">Você apresenta <span id="errorPercentFilm">79%</span> dos principais erros<br>De iniciantes no instagram.</p>
+
+        <p class="result-text">
+          Durante nosso processo de aprendizagem na area<br>
+          audiovisual visamos viver de nossa arte, mas as vezes<br>
+          esquecemos de pontos importantes que não gostamos.
+        </p>
+
+        <p class="result-text">
+          E lidar com clientes requerem isso.<br>
+          Seus clientes não querem um filtro ou produção magica.<br>
+          <strong class="red">Ele deseja o vendas.</strong><br>
+          E isso gera um desgaste de relações,<br>
+          entre você e seus clientes.
+        </p>
+
+        <p class="result-text">
+          Com base nisso acesse esse insights<br>
+          e esse material <strong>GRATUITO</strong> que vai te ajudar de forma<br>
+          mais completa para acelerar seus resultados.
+        </p>
+
+        <div class="bars">
+          <div class="bar-row">
+            <span class="bar-label">PREPARO</span>
+            <div class="bar-track"><div class="bar-fill" style="width:89%"></div></div>
+            <span class="bar-value">89</span>
+          </div>
+          <div class="bar-row">
+            <span class="bar-label">INFORMAÇÃO</span>
+            <div class="bar-track"><div class="bar-fill" style="width:55%"></div></div>
+            <span class="bar-value">55</span>
+          </div>
+          <div class="bar-row">
+            <span class="bar-label">ORGANIZAÇÃO</span>
+            <div class="bar-track"><div class="bar-fill" style="width:40%"></div></div>
+            <span class="bar-value">40</span>
+          </div>
+          <div class="bar-row">
+            <span class="bar-label">AUTOMAÇÃO</span>
+            <div class="bar-track"><div class="bar-fill" style="width:43%"></div></div>
+            <span class="bar-value">43</span>
+          </div>
+        </div>
+
+        <div class="book-cover">
+          <img src="assets/book-filmaker.jpg" alt="Em todo lugar, de lugar nenhum">
+        </div>
+
+        <p class="form-title">Preencha o formulário para envio do material em sua caixa de entrada.</p>
+
+        <form id="leadFormFilm" class="lead-form" onsubmit="submitLead(event, 'film')">
+          <label>Nome e sobrenome:</label>
+          <input type="text" name="name" required placeholder="Seu nome completo">
+          <label>Email:</label>
+          <input type="email" name="email" required placeholder="seu@email.com">
+          <button type="submit" class="btn-primary">Receber Material Gratuito →</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- ========== RESULT INSTA ========== -->
+    <section id="step-result-insta" class="step">
+      <div class="content result-content">
+        <h2 class="result-title">Seu diagnóstico saiu,</h2>
+        <p class="result-highlight red">E olha só o que apareceu: você tá com <span id="errorPercentInsta">89%</span> dos erros<br>mais clássicos de iniciante no Instagram!</p>
+
+        <p class="result-text">
+          Eu também já fui assim,<br>
+          Lá em 2015, quando o Instagram começou a explodir<br>
+          de verdade, todo mundo achava que era só postar<br>
+          foto bonitinha e pronto. Mas as coisas mudaram, o<br>
+          algoritmo mudou, o jeito que a gente busca, o que a<br>
+          gente deseja...
+        </p>
+
+        <p class="result-text">
+          Só que tem uma coisa que <strong>NÃO</strong> mudou.<br>
+          os <strong>REELS</strong>! Eles são a alavanca de crescimento,
+        </p>
+
+        <p class="result-formula red">
+          Video → # → novos views → Novos seguidores<br>
+          O post ainda funciona, mais não é alavanca.
+        </p>
+
+        <p class="result-text">
+          Com base nisso acesse esse insights<br>
+          e esse material <strong>GRATUITO</strong> que vai te ajudar de forma mais<br>
+          completa para acelerar seus resultados.
+        </p>
+
+        <div class="bars">
+          <div class="bar-row">
+            <span class="bar-label">PRODUÇÃO</span>
+            <div class="bar-track"><div class="bar-fill" style="width:67%"></div></div>
+            <span class="bar-value">67</span>
+          </div>
+          <div class="bar-row">
+            <span class="bar-label">POTENCIAL</span>
+            <div class="bar-track"><div class="bar-fill" style="width:65%"></div></div>
+            <span class="bar-value">65</span>
+          </div>
+          <div class="bar-row">
+            <span class="bar-label">ORGANIZAÇÃO</span>
+            <div class="bar-track"><div class="bar-fill" style="width:43%"></div></div>
+            <span class="bar-value">43</span>
+          </div>
+          <div class="bar-row">
+            <span class="bar-label">AUTOMAÇÃO</span>
+            <div class="bar-track"><div class="bar-fill" style="width:43%"></div></div>
+            <span class="bar-value">43</span>
+          </div>
+        </div>
+
+        <div class="book-cover">
+          <img src="assets/book-insta.jpg" alt="Da Post ao reels">
+        </div>
+
+        <p class="form-title">Preencha o formulário para envio do material em sua caixa de entrada.</p>
+
+        <form id="leadFormInsta" class="lead-form" onsubmit="submitLead(event, 'insta')">
+          <label>Nome e sobrenome:</label>
+          <input type="text" name="name" required placeholder="Seu nome completo">
+          <label>Email:</label>
+          <input type="email" name="email" required placeholder="seu@email.com">
+          <button type="submit" class="btn-primary">Receber Material Gratuito →</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- ========== THANK YOU ========== -->
+    <section id="step-thanks" class="step">
+      <div class="content thanks-content">
+        <div class="thanks-icon">✅</div>
+        <h2>Material enviado!</h2>
+        <p>Verifique sua caixa de entrada (e o spam) em alguns minutos.</p>
+        <p class="thanks-sub">Enquanto isso, prepare-se para elevar o nível das suas produções.</p>
+        <a href="#" class="btn-primary" onclick="location.reload()">Fazer novo diagnóstico</a>
+      </div>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
